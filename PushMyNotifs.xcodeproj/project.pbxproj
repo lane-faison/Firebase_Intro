@@ -20,6 +20,7 @@
 		A80520B10061FB230A5A1809 /* Pods-PushMyNotifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushMyNotifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PushMyNotifs/Pods-PushMyNotifs.debug.xcconfig"; sourceTree = "<group>"; };
 		C6C0B1D67A229FC9674A93E8 /* Pods_PushMyNotifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PushMyNotifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AE38EDF440C6290DCBF5D6 /* Pods-PushMyNotifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushMyNotifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-PushMyNotifs/Pods-PushMyNotifs.release.xcconfig"; sourceTree = "<group>"; };
+		F65AFA1A1F09714200B3AD05 /* PushMyNotifs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushMyNotifs.entitlements; sourceTree = "<group>"; };
 		F6E9D7EE1F09548100AFA802 /* PushMyNotifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushMyNotifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E9D7F11F09548100AFA802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E9D7F31F09548100AFA802 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		F6E9D7F01F09548100AFA802 /* PushMyNotifs */ = {
 			isa = PBXGroup;
 			children = (
+				F65AFA1A1F09714200B3AD05 /* PushMyNotifs.entitlements */,
 				F6E9D8031F09550900AFA802 /* GoogleService-Info.plist */,
 				F6E9D7F11F09548100AFA802 /* AppDelegate.swift */,
 				F6E9D7F31F09548100AFA802 /* ViewController.swift */,
@@ -128,6 +130,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 34KC4VR7Y2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -341,6 +348,7 @@
 			baseConfigurationReference = A80520B10061FB230A5A1809 /* Pods-PushMyNotifs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushMyNotifs/PushMyNotifs.entitlements;
 				DEVELOPMENT_TEAM = 34KC4VR7Y2;
 				INFOPLIST_FILE = PushMyNotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +363,7 @@
 			baseConfigurationReference = D2AE38EDF440C6290DCBF5D6 /* Pods-PushMyNotifs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushMyNotifs/PushMyNotifs.entitlements;
 				DEVELOPMENT_TEAM = 34KC4VR7Y2;
 				INFOPLIST_FILE = PushMyNotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,6 +392,7 @@
 				F6E9D8021F09548100AFA802 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
